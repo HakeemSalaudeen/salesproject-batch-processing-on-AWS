@@ -23,7 +23,7 @@ The repository contains the following Terraform configuration files:
 
 ## **Features**
 - **Serverless Architecture**: Uses managed services like Redshift Serverless and Glue for scalability and reduced operational overhead.
-- **Automated Data Pipeline**: Glue jobs are triggered hourly via EventBridge to process new data.
+- **Automated Data Pipeline**: Glue jobs are scheduled to run hourly to process new data.
 - **Error Handling**: SNS sends email notifications for Glue job failures.
 - **Infrastructure as Code**: All resources are deployed using Terraform, ensuring consistency and reproducibility.
 - **Security**: Redshift is deployed in a private subnet, and credentials are stored securely in Secrets Manager.
@@ -32,8 +32,8 @@ The repository contains the following Terraform configuration files:
 
 ## **Prerequisites**
 1. **AWS Account**: Ensure you have an active AWS account.
-2. **Terraform**: Install Terraform (v1.0.0 or later) on your local machine.
-3. **AWS CLI**: Configure AWS CLI with your credentials.
+2. **Terraform**: Install Terraform on your local machine.
+3. **AWS CLI**: Configure AWS CLI with your credentials (access key and secret key.
 
 ---
 
@@ -49,7 +49,7 @@ The repository contains the following Terraform configuration files:
    ```
 
 3. **Review Variables**:
-   Update the `variable.tf` file with your specific configurations (e.g., S3 bucket names, Redshift credentials).
+   Update the `variable.tf` file with your specific configurations (Redshift credentials).
 
 4. **Deploy Infrastructure**:
    ```bash
