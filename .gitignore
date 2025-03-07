@@ -1,0 +1,9 @@
+.terraform.lock.hcl
+emr-etl-job.py
+lambda_function.py
+lambda.tf 
+salesproject-trigger-a631130d-adc8-4345-b357-c8a9ab37eb30.zip
+salesproject-trigger.zip
+salesproject.json
+iamrole.tf
+.terraform
