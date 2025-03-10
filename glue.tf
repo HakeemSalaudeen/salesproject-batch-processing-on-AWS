@@ -10,7 +10,6 @@ resource "aws_glue_crawler" "salesproject-crawler" {
   s3_target {
     path = "s3://${aws_s3_bucket.salesproject-datalake.bucket}"
   }
-
 }
 
 resource "aws_glue_connection" "salesproject-redshift-connection" {

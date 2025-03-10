@@ -10,11 +10,6 @@ resource "aws_secretsmanager_secret_version" "redshift_credentials" {
   })
 }
 
-# data "aws_secretsmanager_secret_version" "redshift_credentials" {
-#   secret_id = aws_secretsmanager_secret.salesproject-redshiftcredentials.name
-# }
-
-
 resource "aws_redshiftserverless_namespace" "salesproject-dw" {
   namespace_name      = "salesproject-dw"
   admin_username      = jsondecode(aws_secretsmanager_secret_version.redshift_credentials.secret_string)["username"]
