@@ -43,7 +43,7 @@ The repository contains the following Terraform configuration files:
 ## **Setup Instructions**
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/HakeemSalaudeen/Batch-processing-on-AWS_salesproject.git
+   git clone https://github.com/HakeemSalaudeen/salesproject-batch-processing-on-AWS.git
    ```
 
 2. **Initialize Terraform**:
