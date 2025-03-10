@@ -1,5 +1,4 @@
 # salesproject: Batch processing on AWS
-## AWS Cloud Migration for Batch Processing
 
 ## **Project Overview**
 This project migrates an on-premises batch processing system to AWS, addressing challenges in **reliability, scalability, and maintainability**. The architecture leverages AWS services like **S3, Glue, and Redshift Serverless** to create a robust, serverless data pipeline. All infrastructure is provisioned using **Terraform**, ensuring consistency and reproducibility.
