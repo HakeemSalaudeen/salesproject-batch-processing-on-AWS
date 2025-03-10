@@ -4,6 +4,10 @@
 ## **Project Overview**
 This project migrates an on-premises batch processing system to AWS, addressing challenges in **reliability, scalability, and maintainability**. The architecture leverages AWS services like **S3, Glue, and Redshift Serverless** to create a robust, serverless data pipeline. All infrastructure is provisioned using **Terraform**, ensuring consistency and reproducibility.
 
+
+![image](https://github.com/user-attachments/assets/4e94dc60-3204-4549-952a-fb3a63843dc0)
+
+
 ---
 
 ## **Project Structure**
