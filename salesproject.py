@@ -46,23 +46,32 @@ AmazonRedshift_node1740705630955 = glueContext.write_dynamic_frame.from_options(
 
 # Move processed files to backup folder
 s3_client = boto3.client('s3')
-bucket_name = "your-s3-bucket-name"  # Replace with your bucket name
-processed_folder = "salesproject-landingpath/"
+bucket_name = "salesproject-datalake" 
+landingpath_folder = "salesproject-landingpath/"
 backup_folder = "salesproject-backup/"
 
-# List objects in the processed folder
-response = s3_client.list_objects_v2(Bucket=bucket_name, Prefix=processed_folder)
+# List objects in the landingpath folder
+processedfiles = s3_client.list_objects_v2(Bucket=bucket_name, Prefix=landingpath_folder)
 
-for obj in response.get('Contents', []):
+for obj in processedfiles.get('Contents', []):
     source_key = obj['Key']
-    destination_key = backup_folder + source_key.split('/')[-1]  # Extract filename
+    file_name = source_key.split('/')[-1]
+    destination_key = backup_folder + file_name #source_key.split('/')[-1] 
+    
+    print(f"Moving {source_key} to {destination_key}")
+    
     # Copy object to backup folder
     s3_client.copy_object(
         Bucket=bucket_name,
         CopySource={'Bucket': bucket_name, 'Key': source_key},
-        Key=destination_key
-    )
-    # Delete object from processed folder
+        Key=destination_key)
+    
+    print(f"Copying object in {landingpath_folder} to {backup_folder}")
+    
+    # Delete object from landing path folder
     s3_client.delete_object(Bucket=bucket_name, Key=source_key)
+    
+    print(f"Successfully moved {file_name}")
+
 
 job.commit()
