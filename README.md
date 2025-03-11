@@ -1,8 +1,11 @@
-# Batch-processing-on-AWS_salesproject
-# **README: AWS Cloud Migration for Batch Processing**
+# salesproject: Batch processing on AWS
 
 ## **Project Overview**
 This project migrates an on-premises batch processing system to AWS, addressing challenges in **reliability, scalability, and maintainability**. The architecture leverages AWS services like **S3, Glue, and Redshift Serverless** to create a robust, serverless data pipeline. All infrastructure is provisioned using **Terraform**, ensuring consistency and reproducibility.
+
+
+![image](https://github.com/user-attachments/assets/4e94dc60-3204-4549-952a-fb3a63843dc0)
+
 
 ---
 
@@ -40,7 +43,7 @@ The repository contains the following Terraform configuration files:
 ## **Setup Instructions**
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/HakeemSalaudeen/Batch-processing-on-AWS_salesproject.git
+   git clone https://github.com/HakeemSalaudeen/salesproject-batch-processing-on-AWS.git
    ```
 
 2. **Initialize Terraform**:
