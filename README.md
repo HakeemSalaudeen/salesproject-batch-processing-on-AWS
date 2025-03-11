@@ -6,7 +6,6 @@ This project migrates an on-premises batch processing system to AWS, addressing 
 
 ![image](https://github.com/user-attachments/assets/4e94dc60-3204-4549-952a-fb3a63843dc0)
 
-
 ---
 
 ## **Project Structure**
@@ -24,12 +23,13 @@ The repository contains the following Terraform configuration files:
 
 ---
 
-## **Features**
-- **Serverless Architecture**: Uses managed services like Redshift Serverless and Glue for scalability and reduced operational overhead.
-- **Automated Data Pipeline**: Glue jobs are scheduled to run hourly to process new data.
+## **Key Features**
+- **Serverless Architecture**: Uses managed services like Redshift Serverless and Glue for scalability eliminating infrastructure management overhead.
+- **Automated Data Pipeline**: Glue jobs are scheduled to run hourly to process new data files.
 - **Error Handling**: SNS sends email notifications for Glue job failures.
 - **Infrastructure as Code**: All resources are deployed using Terraform, ensuring consistency and reproducibility.
-- **Security**: Redshift is deployed in a private subnet, and credentials are stored securely in Secrets Manager.
+- **Security**: Redshift is deployed in a VPC (private subnet), least privilege access, and credentials are stored securely in Secrets Manager.
+- **Cost Optimization**: Pay-for-use model with no upfront infrastructure costs
 
 ---
 
@@ -80,7 +80,7 @@ The repository contains the following Terraform configuration files:
 ## **Contributing**
 Contributions are welcome! Please follow these steps:
 1. Fork the repository.
-2. Create a new branch for your feature or bugfix.
+2. Create a new branch for your feature or bug fix.
 3. Submit a pull request with a detailed description of your changes.
 
 ---
